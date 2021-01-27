@@ -4,12 +4,122 @@
     --poppins : 'Poppins';
     --blackBG : #1f1f1f;
     --whiteFont : #F4F5F4;
-    --green : #9dd465;
-    --red : #FF2400
+    --fire : #e4604f;
+    --grass : #9dd465;
+    --electric : #f9e45f;
+    --water : #019aff;
+    --ground : #e4c967;
+    --rock : #cabb7b;
+    --fairy : #eeb2fa;
+    --poison : #9f619d;
+    --bug : #c5cf4a;
+    --dragon : #857af7;
+    --psychic : #e56eaf;
+    --flying : #80a4f9;
+    --fighting : #9b5a48;
+    --normal : #bab8ab;
 }
 
 * {
     box-sizing: border-box;
+}
+
+.bg-fire {
+    background: linear-gradient(to top right, var(--fire), #4c4c4c 55%); 
+}
+.fire {
+    background-color: var(--fire)
+}
+
+.bg-grass {
+    background: linear-gradient(to top right, var(--grass), #4c4c4c 55%); 
+}
+.grass {
+    background-color: var(--grass)
+}
+
+.bg-electric {
+    background: linear-gradient(to top right, var(--electric), #4c4c4c 55%); 
+}
+.electric {
+    background-color: var(--electric)
+}
+
+.bg-water {
+    background: linear-gradient(to top right, var(--water), #4c4c4c 55%); 
+}
+.water {
+    background-color: var(--water)
+}
+
+.bg-ground {
+    background: linear-gradient(to top right, var(--ground), #4c4c4c 55%); 
+}
+.ground {
+    background-color: var(--ground)
+}
+
+.bg-rock {
+    background: linear-gradient(to top right, var(--rock), #4c4c4c 55%); 
+}
+.rock {
+    background-color: var(--rock)
+}
+
+.bg-fairy {
+    background: linear-gradient(to top right, var(--fairy), #4c4c4c 55%); 
+}
+.fairy {
+    background-color: var(--fairy)
+}
+
+.bg-poison {
+    background: linear-gradient(to top right, var(--poison), #4c4c4c 55%); 
+}
+.poison {
+    background-color: var(--poison)
+}
+
+.bg-bug {
+    background: linear-gradient(to top right, var(--bug), #4c4c4c 55%); 
+}
+.bug {
+    background-color: var(--bug)
+}
+
+.bg-dragon {
+    background: linear-gradient(to top right, var(--dragon), #4c4c4c 55%); 
+}
+.dragon {
+    background-color: var(--dragon)
+}
+
+.bg-psychic {
+    background: linear-gradient(to top right, var(--psychic), #4c4c4c 55%); 
+}
+.psychic {
+    background-color: var(--psychic)
+}
+
+.bg-flying {
+    background: linear-gradient(to top right, var(--flying), #4c4c4c 55%); 
+}
+.flying {
+    background-color: var(--flying)
+}
+
+.bg-fighting {
+    background: linear-gradient(to top right, var(--fighting), #4c4c4c 55%); 
+}
+.fighting {
+    background-color: var(--fighting)
+}
+
+.bg-normal {
+    background: linear-gradient(to top right, var(--normal), #4c4c4c 55%); 
+}
+.normal {
+    background-color: var(--normal)
 }
 
 body,
@@ -52,14 +162,33 @@ header h1 {
 }
 
 .card .img img {
-    max-width: 300px;
-    max-height: 300px;
-    width: 100%;
+    max-width: 250px;
+}
+
+.card .img {
+    margin: 40px auto;
+    width: 250px;
+    height: 250px;
+    /* background: linear-gradient(to top right, var(--fire), #4c4c4c 55%); */
+    background-position: 0 0;
+    border-radius: 50%;
+    animation: bg-out 300ms ease-in forwards 1;
+    background-size: 400% 400%;
+}
+
+.card:hover .img {
+    animation: bg-in 350ms ease-in forwards 1;
+}
+
+.card {
+    cursor: pointer;
+}
+
+.card .type {
+    border-radius: 20px;
 }
 
 .card .type p {
-    background-color: var(--red);
-    border-radius: 10px;
     font-size: 25px;
     font-weight: bolder;
     letter-spacing: 4px;
@@ -69,4 +198,36 @@ header h1 {
 
 .card .favorite img {
     display: none;
+}
+
+/* ! tablet */
+@media screen and (max-width: 1280px) {
+    .cards .card {
+        width: calc(50% - 20px);
+    }
+}
+
+/* ! celular */
+@media screen and (max-width: 768px) {
+    .cards .card {
+        width: calc(100% - 20px);
+    }
+}
+
+@keyframes bg-in {
+    0% {
+        background-position: 0 0%;
+    }
+    100%{
+        background-position: 0 60%;
+    }
+}
+
+@keyframes bg-out {
+    0% {
+        background-position: 0 60%;
+    }
+    100%{
+        background-position: 0 0%;
+    }
 }
