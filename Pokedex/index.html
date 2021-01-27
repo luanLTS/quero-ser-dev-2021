@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>QSD2021 - Pokedéx</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QSD2021 - Pokedéx</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Pokedex</h1>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="cards">
+                <div class="card">
+                    <div class="title">
+                        <h2>Charizard</h2>
+                        <small>#6</small>
+                    </div>
+                    <div class="img">
+                        <img src="https://pokeres.bastionbot.org/images/pokemon/6.png" alt="pokemon">
+                    </div>
+                    <div class="type">
+                        <p>Fire</p>
+                    </div>
+                    <div class="favorite">
+                        <img src="./heart.png" alt="favorite">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let cards = document.querySelector('.cards')
+        let card = document.querySelector('.card')
+        for ( let i = 0; i <=18; i++ ){
+            let clone = card.cloneNode(true)
+            cards.appendChild(clone)
+        }
+    </script>
+
+</body>
+
 </html>
