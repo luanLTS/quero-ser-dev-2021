@@ -17,33 +17,18 @@
     <section>
         <div class="container">
             <div class="cards">
-                <div class="card">
-                    <div class="title">
-                        <h2>Charizard</h2>
-                        <small>#6</small>
-                    </div>
-                    <div class="img bg-fire">
-                        <img src="https://pokeres.bastionbot.org/images/pokemon/6.png" alt="pokemon">
-                    </div>
-                    <div class="type fire">
-                        <p>Fire</p>
-                    </div>
-                    <div class="favorite">
-                        <img src="./heart.png" alt="favorite">
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
     <script>
-        let cards = document.querySelector('.cards')
-        let card = document.querySelector('.card')
-        for ( let i = 0; i <=18; i++ ){
-            let clone = card.cloneNode(true)
-            cards.appendChild(clone)
-        }
-
+        // let cards = document.querySelector('.cards')
+        // let card = document.querySelector('.card')
+        // for ( let i = 0; i <=18; i++ ){
+        //     let clone = card.cloneNode(true)
+        //     cards.appendChild(clone)
+        // }
+        //  CRIA UM OBJETO COM A PALETA DE CORES QUE VAI SER GERADA
         let colors = {
             fire : '#e4604f',
             grass : '#9dd465',
@@ -59,14 +44,22 @@
             flying : '#80a4f9',
             fighting : '#9b5a48',
             normal : '#bab8ab',
+             ice : '#85CEFF',
+             'ghost' : '#7A7A7A',
+             'dark' : '#141414'
         }
-
+        
+        // DECLARA OS ARRAYS QUE VÃO ACOMODAR OS CÓDIGOS
         let style =[]
         let variables =[]
+
+        // PASSA CADA ITEM DO ARRAY DE COR ATRIBUINTO A ELE O NOME DE 'KEY'
         for (let key in colors) {
+                // ADICIONA NO ARRAY DE VARIAVEIS CADA VARIAVEL EM CSS
             variables.push(`
                 --${ key } : ${ colors[key] };
             `)
+                // CRIA DENTRO DA VARIAVEL A ESTRUTURA DAS CLASSES EM CSS UTILIZANDO TEMPLATE STRING
             let css = `
                 .bg-${ key } {
                     background: linear-gradient(to top right, var(--${ key }), #4c4c4c 55%); 
@@ -75,12 +68,17 @@
                     background-color: var(--${ key })
                 }
             `
+            //ADICIONA A VARIAVEL COM AS CLASSES CADA VEZ QUE O LACO ITERA COM A KEY
             style.push(css)
         }
+
+        //IMPRIME NO CONSOLE TUDO QUE ESTA NOS ARRAYS TUDO COMO UM TEXTO
         console.log(style.join(''))
         console.log(variables.join(''))
 
     </script>
+
+    <script src="./script.js"></script>
 
 </body>
 

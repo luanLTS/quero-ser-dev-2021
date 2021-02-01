@@ -18,11 +18,15 @@
     --flying : #80a4f9;
     --fighting : #9b5a48;
     --normal : #bab8ab;
+    --ice : #85CEFF;
+    --ghost : #7A7A7A;
+    --dark : #141414;
 }
 
 * {
     box-sizing: border-box;
 }
+
 
 .bg-fire {
     background: linear-gradient(to top right, var(--fire), #4c4c4c 55%); 
@@ -120,6 +124,25 @@
 }
 .normal {
     background-color: var(--normal)
+}
+
+.bg-ice {
+    background: linear-gradient(to top right, var(--ice), #4c4c4c 55%); 
+}
+.ice {
+    background-color: var(--ice)
+}
+.bg-ghost {
+    background: linear-gradient(to top right, var(--ghost), #4c4c4c 55%); 
+}
+.ghost {
+    background-color: var(--ghost)
+}
+.bg-dark {
+    background: linear-gradient(to top right, var(--dark), #4c4c4c 55%); 
+}
+.dark {
+    background-color: var(--dark)
 }
 
 body,
